@@ -11,8 +11,13 @@ Thworld的自动签到脚本
 
 ## 注意事项
 1. 安装依赖包的时候，可能出现问题。`puppeteer`安装时需要翻墙，同时它会下载`Chromium`,比较大。具体请查看[puppeteer官方文档](https://github.com/GoogleChrome/puppeteer)
-2. 如果想把程序放到后台运行，**在Mac的zsh下**可用`node index.js > back_log.txt 2>&1 &!`命令来实现，注意命令最后用的是`&!`而不是`&`，如果用的是`&`，当前终端退出后程序就会停止运行，用`&!`则终端退出程序也不会停止，但这时要杀死这个程序只能通过`ps aux | grep node\ index.js`获取到`id`后通过`kill id`来实现了。**在ubuntu下用**`node index.js > back_log.txt 2>&1 &`可以实现ssh退出后程序依旧在运行
+2. 如果想把程序放到后台运行
+    * **在Mac的zsh下**可用`node index.js > back_log.txt 2>&1 &!`命令来实现，注意命令最后用的是`&!`而不是`&`，如果用的是`&`，当前终端退出后程序就会停止运行，用`&!`则终端退出程序也不会停止，但这时要杀死这个程序只能通过`ps aux | grep node\ index.js`获取到`id`后通过`kill id`来实现了。
+    * **在ubuntu下用**`node index.js > back_log.txt 2>&1 &`可以实现ssh退出后程序依旧在运行
 3. 有关后台运行的相关资料
-  * [Linux 技巧：让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html)
-  * [Exit zsh, but leave running jobs open?](https://stackoverflow.com/questions/19302913/exit-zsh-but-leave-running-jobs-open)
-  * [Mac上ZSH的使用小技巧](http://ju.outofmemory.cn/entry/274090)
+    * [Linux 技巧：让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html)
+    * [Exit zsh, but leave running jobs open?](https://stackoverflow.com/questions/19302913/exit-zsh-but-leave-running-jobs-open)
+    * [Mac上ZSH的使用小技巧](http://ju.outofmemory.cn/entry/274090)
+4. 在Ubutntu服务器上遇到两个问题
+    * 缺少依赖，把依赖安装完整就好了，详情查看[Failed to launch chrome](https://github.com/GoogleChrome/puppeteer/issues/807) 和 [Troubleshooting](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md)
+    * 由于linux的某个问题导致的bug？详情查看[Chrome Headless fails due to sandbox issues](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#chrome-headless-fails-due-to-sandbox-issues)
