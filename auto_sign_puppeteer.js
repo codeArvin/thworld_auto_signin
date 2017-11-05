@@ -14,7 +14,7 @@ const {
 
 async function auto_signin() {
   const start_time = new Date();
-  // --no-sandbox参数是保证在unbuntu上程序能正确运�
+  // --no-sandbox参数是保证在unbuntu上程序能正确运行
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
 
