@@ -15,3 +15,4 @@ Thworld的自动签到脚本
 3. 有关后台运行的相关资料
   * [Linux 技巧：让进程在后台可靠运行的几种方法](https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/index.html)
   * [Exit zsh, but leave running jobs open?](https://stackoverflow.com/questions/19302913/exit-zsh-but-leave-running-jobs-open)
+  * [Mac上ZSH的使用小技巧](http://ju.outofmemory.cn/entry/274090)
