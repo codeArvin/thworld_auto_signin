@@ -1,0 +1,15 @@
+{
+  "name": "thworld_auto_signin",
+  "version": "1.0.0",
+  "description": "auto sign in thworld",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "codearvin",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.3.0",
+    "puppeteer": "^0.12.0"
+  }
+}
